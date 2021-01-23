@@ -1,0 +1,24 @@
+
+
+.boarder-cell {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  background-color: #f8dc81;
+}
+.boarder-cell:first-child {
+  border-left: 1px solid #333;
+}
+
+.boarder-row {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+.boarder-row:last-child .boarder-cell {
+  border-bottom: 1px solid #333;
+}
