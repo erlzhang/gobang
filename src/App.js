@@ -92,13 +92,14 @@ export default class extends React.Component {
   }
 
   renderSkechBoader() {
-    const rows = this.state.pieces.map(r => {
+    const rows = this.state.pieces.map((r, index) => {
       return (
-        <div className="row">
+        <div className="row" key={index} >
           { 
             r.map(piece => {
               return (
                 <Position
+                  key={`${piece.row}-${piece.col}`}
                   piece={piece}
                   onClick={this.handleClick}
                 ></Position>
@@ -110,7 +111,7 @@ export default class extends React.Component {
     });
 
     return (
-      <div class="sketch-board">
+      <div className="sketch-board">
         { rows }
       </div>
     )

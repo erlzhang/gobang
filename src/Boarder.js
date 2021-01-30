@@ -12,11 +12,11 @@ export default class extends React.Component {
       let squares = [];
       for (let j = 0; j < ROWS; j++) {
         squares.push(
-          <div className="boarder-cell"></div>
+          <div className="boarder-cell" key={`${i}-${j}`}></div>
         )
       }
       rows.push(
-        <div className="boarder-row">
+        <div className="boarder-row" key={i}>
           { squares }
         </div>
       )
